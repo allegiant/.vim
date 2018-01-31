@@ -123,3 +123,18 @@ let g:closetag_filenames = "*.xml,*.html,*.xhtml,*.phtml,*.php,*.vue"
 "----------------------delimitMate 设置 begin --------------------"
 au FileType xml,html,phtml,php,xhtml,js,vue let b:delimitMate_matchpairs = "(:),[:],{:}"
 "----------------------delimitMate 设置 end ----------------------"
+
+"----------------------ALE 设置 begin ----------------------------"
+"始终开启标志列
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = 'E'
+let g:ale_sign_warning = 'W'
+let g:ale_statusline_format = ['E%d', 'W%d', '✔ OK']
+"显示Linter名称,出错或警告等相关信息
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:airline#extensions#ale#enabled =1
+let g:airline#extensions#ale#error_symbol = 'E'
+let g:airline#extensions#ale#warning_symbol = 'W'
+"----------------------ALE 设置 begin ----------------------------"
