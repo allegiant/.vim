@@ -1,3 +1,4 @@
+filetype plugin indent on " 加载插件和支持缩进
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 

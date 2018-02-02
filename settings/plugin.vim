@@ -3,47 +3,42 @@ filetype off                  " 必须
 
 " 判断操作系统类型
 if(has('win32') || has('win64'))
-    set rtp+=$VIM/.vim/bundle/Vundle.vim
+    "set rtp+=$VIM/.vim/bundle/Vundle.vim
     let path='$VIM/.vim/bundle'
 else
-    set rtp+=~/.vim/bundle/Vundle.vim
+    "set rtp+=~/.vim/bundle/Vundle.vim
     let path='~/.vim/bundle'
 endif
 
-" vundle 管理的插件列表必须位于 vundle#begin() 和 vundle#end() 之间
-call vundle#begin(path)
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'kristijanhusak/vim-hybrid-material'
-Plugin 'nightsense/forgotten'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'thinca/vim-quickrun'              """""""快速运行
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'tenfyzhong/CompleteParameter.vim'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'Raimondi/delimitMate'             """""""符号自动补全
-Plugin 'SirVer/ultisnips'                 """""""代码片段
-Plugin 'honza/vim-snippets'
-Plugin 'MikeCoder/open-in-browser.vim'
-Plugin 'gko/vim-coloresque'
-Plugin 'alvan/vim-closetag'
-Plugin 'posva/vim-vue'
-Plugin 'w0rp/ale'
+" vim-plug 管理的插件列表必须位于 plug#begin() 和 plug#end() 之间
+call plug#begin(path)
+"Plugin 'VundleVim/Vundle.vim'
+Plug 'iamcco/mathjax-support-for-mkdp' | Plug 'iamcco/markdown-preview.vim'
+Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'nightsense/forgotten'
+Plug 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' }
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'thinca/vim-quickrun'              """""""快速运行
+Plug '$VIM/.vim/bundle/YouCompleteMe' | Plug 'tenfyzhong/CompleteParameter.vim'
+Plug 'ternjs/tern_for_vim'
+Plug 'Raimondi/delimitMate'             """""""符号自动补全
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'                 """""""代码片段
+Plug 'MikeCoder/open-in-browser.vim'
+Plug 'gko/vim-coloresque'
+Plug 'alvan/vim-closetag'
+Plug 'posva/vim-vue' | Plug 'w0rp/ale'
 
-call vundle#end()
+call plug#end()
 """"""""""""""" 插件列表结束 """"""""""""""""""
-filetype plugin on    " required          """""""打开文件类型及插件侦测
-"
-" 简要帮助文档
-" :PluginList       - 列出所有已配置的插件
-" :PluginInstall    - 安装插件,追加 `!` 用以更新或使用 :PluginUpdate
-" :PluginSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存
-" :PluginClean      - 清除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件
-"
-" 查阅 :h vundle 获取更多细节和wiki以及FAQ
+" PlugInstall [name ...] [#threads]   Install plugins
+" PlugUpdate [name ...] [#threads]  Install or update plugins
+" PlugClean[!]  Remove unused directories (bang version will clean without prompt)
+" PlugUpgrade   Upgrade vim-plug itself
+" PlugStatus  Check the status of plugins
+" PlugDiff  Examine changes from the previous update and the pending changes
+" PlugSnapshot[!] [output path]   Generate script for restoring the current snapshot of the plugins
 " 将你自己对非插件片段放在这行之后
 
 "----------------------NERDTree设置--------------------------"
@@ -113,6 +108,7 @@ let g:open_in_browser_allowed_file_types = {
             \"html": 1,
             \"htm": 1,
             \"xml": 1,
+            \"md":1,
         \}
 "----------------------OpenInBrowser设置 end ---------------------"
 

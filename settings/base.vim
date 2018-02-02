@@ -33,7 +33,6 @@ set vb t_vb= " 置空错误铃声的终端代码
 au GuiEnter * set t_vb= "关闭闪屏
 set autoread " 当文件在外部被修改时，自动重新读取
 set relativenumber "设置相对行号
-
 """"""""""""""编码设置 begin """"""""""""""""""
 set fenc=utf-8
 set encoding=utf-8

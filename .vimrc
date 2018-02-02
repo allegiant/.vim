@@ -20,6 +20,7 @@ else
 endif
 
 source $VIM/.vim/settings/base.vim
-source $VIM/.vim/settings/gui.vim
+source $VIM/.vim/autoload/plug.vim
 source $VIM/.vim/settings/plugin.vim
+source $VIM/.vim/settings/gui.vim
 source $VIM/.vim/settings/map.vim
