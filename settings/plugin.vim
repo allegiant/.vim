@@ -16,7 +16,7 @@ call plug#begin(path)
 Plug 'iamcco/mathjax-support-for-mkdp' | Plug 'iamcco/markdown-preview.vim'
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'nightsense/forgotten'
-Plug 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
