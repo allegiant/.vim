@@ -25,3 +25,6 @@ imap <Leader>mdp :MarkdownPreview<CR>        " 插入模式
 nmap <Leader>mds :MarkdownPreviewStop<CR>    " 普通模式
 imap <Leader>mds :MarkdownPreviewStop<CR>    " 插入模式
 "--------------------markdown-preview.vim设置 begin ------------------------"
+nmap <F8> <Plug>(ale_fix)
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)

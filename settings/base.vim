@@ -8,6 +8,8 @@ augroup ft_vim " vim 文件折叠方式为 marker
     au FileType vim setlocal foldmethod=marker
 augroup END
 
+set wildmenu            " 打开命令模式补全
+set wildmode=list:full	" 命令模式补全方式
 set nocompatible
 set nobackup
 set noswapfile
