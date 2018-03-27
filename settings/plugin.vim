@@ -43,13 +43,27 @@ call plug#end()
 
 
 """""""""""""""""""""""""""""""""" 插件配置begin """"""""""""""""""""""""""""""""""""""""
-source $VIM/.vim/settings/config/NERDTree.vim
-source $VIM/.vim/settings/config/airline.vim
-source $VIM/.vim/settings/config/quickrun.vim
-source $VIM/.vim/settings/config/YouCompleteMe.vim
-source $VIM/.vim/settings/config/ultisnips.vim
-source $VIM/.vim/settings/config/OpenInBrowser.vim
-source $VIM/.vim/settings/config/closetag.vim
-source $VIM/.vim/settings/config/delimitMate.vim
-source $VIM/.vim/settings/config/ALE.vim
+
+if g:isWIN
+	source $VIM/.vim/settings/config/NERDTree.vim
+	source $VIM/.vim/settings/config/airline.vim
+	source $VIM/.vim/settings/config/quickrun.vim
+	source $VIM/.vim/settings/config/YouCompleteMe.vim
+	source $VIM/.vim/settings/config/ultisnips.vim
+	source $VIM/.vim/settings/config/OpenInBrowser.vim
+	source $VIM/.vim/settings/config/closetag.vim
+	source $VIM/.vim/settings/config/delimitMate.vim
+	source $VIM/.vim/settings/config/ALE.vim
+else
+	source ~/.vim/settings/config/NERDTree.vim
+	source ~/.vim/settings/config/airline.vim
+	source ~/.vim/settings/config/quickrun.vim
+	source ~/.vim/settings/config/YouCompleteMe.vim
+	source ~/.vim/settings/config/ultisnips.vim
+	source ~/.vim/settings/config/OpenInBrowser.vim
+	source ~/.vim/settings/config/closetag.vim
+	source ~/.vim/settings/config/delimitMate.vim
+	source ~/.vim/settings/config/ALE.vim
+endif
+
 """""""""""""""""""""""""""""""""" 插件配置end """"""""""""""""""""""""""""""""""""""""

@@ -19,8 +19,16 @@ else
   let g:isGUI = 0
 endif
 
-source $VIM/.vim/settings/base.vim
-source $VIM/.vim/autoload/plug.vim
-source $VIM/.vim/settings/plugin.vim
-source $VIM/.vim/settings/gui.vim
-source $VIM/.vim/settings/map.vim
+if g:isWIN
+	source $VIM/.vim/settings/base.vim
+	source $VIM/.vim/autoload/plug.vim
+	source $VIM/.vim/settings/plugin.vim
+	source $VIM/.vim/settings/gui.vim
+	source $VIM/.vim/settings/map.vim
+else
+	source ~/.vim/settings/base.vim
+	source ~/.vim/autoload/plug.vim
+	source ~/.vim/settings/plugin.vim
+	source ~/.vim/settings/gui.vim
+	source ~/.vim/settings/map.vim
+endif
