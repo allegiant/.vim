@@ -33,8 +33,6 @@ endif
 "set cursorline " 突出显示当前行
 set hlsearch
 set number
-" 窗口大小
-set lines=35 columns=140
 " 分割出来的窗口位于当前窗口下边/右边
 set splitbelow
 set splitright
