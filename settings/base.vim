@@ -1,4 +1,4 @@
-set nocompatible 										" 不要支持vi模式
+﻿set nocompatible 										" 不要支持vi模式
 syntax on 												" 支持语法高亮
 filetype plugin indent on 								" 加载插件和支持缩进
 

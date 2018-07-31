@@ -1,4 +1,4 @@
-set nocompatible              " 去除VI一致性,必须
+﻿set nocompatible              " 去除VI一致性,必须
 filetype off                  " 必须
 
 " 判断操作系统类型
@@ -30,6 +30,7 @@ Plug 'MikeCoder/open-in-browser.vim'
 Plug 'gko/vim-coloresque'
 Plug 'alvan/vim-closetag'
 Plug 'posva/vim-vue' | Plug 'w0rp/ale'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 """""""""""""""""""""""""""""""""" 插件管理结束 """"""""""""""""""""""""""""""""""""""""
