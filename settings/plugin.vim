@@ -56,6 +56,7 @@ if g:isWIN
 	source $VIM/.vim/settings/config/closetag.vim
 	source $VIM/.vim/settings/config/delimitMate.vim
 	source $VIM/.vim/settings/config/ALE.vim
+	source $VIM/.vim/settings/config/vue.vim
 else
 	source ~/.vim/settings/config/NERDTree.vim
 	source ~/.vim/settings/config/airline.vim
@@ -66,6 +67,7 @@ else
 	source ~/.vim/settings/config/closetag.vim
 	source ~/.vim/settings/config/delimitMate.vim
 	source ~/.vim/settings/config/ALE.vim
+	source ~/.vim/settings/config/vue.vim
 endif
 
 """""""""""""""""""""""""""""""""" 插件配置end """"""""""""""""""""""""""""""""""""""""

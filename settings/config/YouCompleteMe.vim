@@ -13,21 +13,23 @@ let g:ycm_key_list_stop_completion = ['<CR>']                 " 回车作为选�
 let g:ycm_key_invoke_completion = '<A-/>'                     " 直接触发自动补全 insert模式下
 let g:ycm_show_diagnostics_ui = 0                             " 关闭显示诊断信息
 " 白名单,启用
-let g:ycm_filetype_whitelist = { 
-      \ "c":1,
-      \ "cpp":1, 
-      \ "objc":1,
-      \ "sh":1,
-      \ "zsh":1,
-      \ "zimbu":1,
-      \ "javascript":1,
-      \ "go":1,
-      \ }
-" 自动弹出语义补全
-let g:ycm_semantic_triggers =  {
-    \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-    \ 'cs,lua,javascript': ['re!\w{2}'],
-\}
+" let g:ycm_filetype_whitelist = { 
+"       \ "c":1,
+"       \ "cpp":1, 
+"       \ "objc":1,
+"       \ "sh":1,
+"       \ "zsh":1,
+"       \ "zimbu":1,
+"       \ "javascript":1,
+"       \ "go":1,
+"       \ "vue":1,
+"       \ "html":1,
+"       \ }
+" " 自动弹出语义补全
+" let g:ycm_semantic_triggers =  {
+"     \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+"     \ 'cs,lua,javascript': ['re!\w{2}'],
+" \}
 set completeopt=menu,menuone
 let g:ycm_add_preview_to_completeopt = 0
 "----------------------youcompleteme设置 end----------------------"
