@@ -6,19 +6,19 @@ source $VIMRUNTIME/menu.vim
 if g:isWIN
   
   colorscheme forgotten-dark
-  set guifont=SourceCodePro\ NF:h11
-  set guifontwide=SourceCodePro\ NF:h11
+  set guifont=DejaVuSansMono\ YaHei\ NF:h11
+  set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
   let g:enable_bold_font = 1
 elseif g:isMAC
 
   colorscheme forgotten-dark
-  set guifont=SourceCodePro\ NF:h11
-  set guifontwide=SourceCodePro\ NF:h11
+  set guifont=DejaVuSansMono\ YaHei\ NF:h11
+  set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
   let g:enable_bold_font = 1
 else
   colorscheme forgotten-dark
-  set guifont=SourceCodePro\ NF:h11
-  set guifontwide=SourceCodePro\ NF:h11
+  set guifont=DejaVuSansMono\ YaHei\ NF:h11
+  set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
   let g:enable_bold_font = 1
 endif
 
