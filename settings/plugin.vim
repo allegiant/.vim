@@ -31,6 +31,7 @@ Plug 'gko/vim-coloresque'
 Plug 'alvan/vim-closetag'
 Plug 'posva/vim-vue' | Plug 'w0rp/ale'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'	"""""""webdev图标
 
 call plug#end()
 """""""""""""""""""""""""""""""""" 插件管理结束 """"""""""""""""""""""""""""""""""""""""
