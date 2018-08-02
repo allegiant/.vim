@@ -3,6 +3,11 @@ let g:airline_theme='molokai'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1 "tab number
 let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#alt_sep = 1
+let g:airline#extensions#tabline#buffers_label = 'Buf'
+let g:airline#extensions#tabline#tabs_label = 'Tab'
+let airline#extensions#tabline#current_first = 1
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
