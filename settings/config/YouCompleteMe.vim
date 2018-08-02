@@ -27,6 +27,15 @@ let g:ycm_show_diagnostics_ui = 0                             " 关闭显示诊�
 "     \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
 "     \ 'cs,lua,javascript': ['re!\w{2}'],
 " \}
+"
+" 启动css补全 begin
+let g:ycm_semantic_triggers = {
+    \   'css': [ 're!^', 're!^\s+', ': ' ],
+    \   'scss': [ 're!^', 're!^\s+', ': ' ],
+    \   'less': [ 're!^', 're!^\s+', ': ' ],
+    \ }
+" css补全end
 set completeopt=menu,menuone
 let g:ycm_add_preview_to_completeopt = 0
 "----------------------youcompleteme设置 end----------------------"
+
