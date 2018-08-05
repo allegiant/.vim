@@ -28,3 +28,5 @@ vim配置
 				}
 			}
   ```
+- vim-less
+	> 1.执行 npm install -g less
