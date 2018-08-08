@@ -19,7 +19,6 @@ Plug 'nightsense/forgotten'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'thinca/vim-quickrun'              """""""快速运行
 Plug 'Valloric/YouCompleteMe' | Plug 'tenfyzhong/CompleteParameter.vim'
