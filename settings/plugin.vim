@@ -18,6 +18,8 @@ Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'nightsense/forgotten'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'lifepillar/vim-solarized8'
+Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'chriskempson/base16-vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
