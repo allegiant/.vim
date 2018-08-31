@@ -1,5 +1,5 @@
 ﻿"----------------------ultisnips设置 begin -----------------------"
-let g:UltiSnipsExpandTrigger       = "<s-j>"
+let g:UltiSnipsExpandTrigger       = "<a-j>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 "----------------------ultisnips设置 end -------------------------"
