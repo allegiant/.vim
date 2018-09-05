@@ -5,28 +5,33 @@ source $VIMRUNTIME/menu.vim
 " 设置着色模式和字体
 if g:isWIN
   
-  colorscheme forgotten-dark
+  colorscheme gruvbox
   set guifont=DejaVuSansMono\ YaHei\ NF:h11
   set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
-  let g:enable_bold_font = 1
 elseif g:isMAC
 
-  colorscheme forgotten-dark
+  colorscheme gruvbox
   set guifont=DejaVuSansMono\ YaHei\ NF:h11
   set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
-  let g:enable_bold_font = 1
 else
-  colorscheme forgotten-dark
+  colorscheme gruvbox
   set guifont=DejaVuSansMono\ YaHei\ NF:h11
   set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
-  let g:enable_bold_font = 1
 endif
 
 if g:isGUI
 
 else
-	let g:forgotten_dark_CursorLineNr = 'off'
-	let g:forgotten_dark_LineNr = 'off'
+	
+endif
+
+if has("termguicolors")
+    " fix bug for vim
+    set t_8f=^[[38;2;%lu;%lu;%lum
+    set t_8b=^[[48;2;%lu;%lu;%lum
+
+    " enable true color
+    set termguicolors
 endif
 
 

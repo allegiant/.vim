@@ -14,12 +14,7 @@ endif
 call plug#begin(path)
 "Plugin 'VundleVim/Vundle.vim'
 Plug 'iamcco/mathjax-support-for-mkdp' | Plug 'iamcco/markdown-preview.vim'
-Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'nightsense/forgotten'
-Plug 'liuchengxu/space-vim-dark'
-Plug 'lifepillar/vim-solarized8'
-Plug 'ErichDonGubler/vim-sublime-monokai'
-Plug 'chriskempson/base16-vim'
+Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'

@@ -1,5 +1,5 @@
 "----------------------airline设置 begin --------------------------"
-let g:airline_theme='molokai'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1 "tab number
 let g:airline#extensions#tabline#show_close_button = 0
