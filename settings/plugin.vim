@@ -24,7 +24,7 @@ Plug 'ternjs/tern_for_vim'
 Plug 'Raimondi/delimitMate'             """""""符号自动补全
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'                 """""""代码片段
 Plug 'MikeCoder/open-in-browser.vim'
-Plug 'gko/vim-coloresque'
+Plug 'ap/vim-css-color'
 Plug 'alvan/vim-closetag'
 Plug 'posva/vim-vue' | Plug 'w0rp/ale'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
