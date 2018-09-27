@@ -12,7 +12,7 @@ nmap <Leader>r <Plug>(quickrun)
 map <F10> :QuickRun<CR>
 
 "----------------------ultisnips设置 begin -----------------------"
-let g:UltiSnipsExpandTrigger       = "<c-j>"
+let g:UltiSnipsExpandTrigger       = "<a-j>"
 let g:UltiSnipsListSnippets        = "<c-s-tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
@@ -34,5 +34,5 @@ nmap <Leader>mds :MarkdownPreviewStop<CR>    " 普通模式
 imap <Leader>mds :MarkdownPreviewStop<CR>    " 插入模式
 "--------------------markdown-preview.vim设置 begin ------------------------"
 nmap <F8> <Plug>(ale_fix)
-nmap <silent> <C-S-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-S-j> <Plug>(ale_next_wrap)
+nmap <silent> <a-k> <Plug>(ale_previous_wrap)
+nmap <silent> <a-j> <Plug>(ale_next_wrap)
