@@ -7,8 +7,11 @@ let g:ale_statusline_format = ['✘ %d', '❗ %d', '✔ ok']
 "显示Linter名称,出错或警告等相关信息
 let g:ale_echo_msg_error_str = '✷ Error'
 let g:ale_echo_msg_warning_str = '⚠ Warning'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_lint_delay = 10
+let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+let g:ale_echo_delay = 20
+let g:ale_lint_delay = 500
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
