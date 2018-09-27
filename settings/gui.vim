@@ -1,10 +1,12 @@
 ﻿filetype plugin indent on " 加载插件和支持缩进
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
+if g:isWIN
+  source $VIMRUNTIME/mswin.vim
+endif
 
 " 设置着色模式和字体
 if g:isWIN
-  
   colorscheme gruvbox
   set guifont=DejaVuSansMono\ YaHei\ NF:h11
   set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
