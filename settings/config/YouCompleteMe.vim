@@ -12,7 +12,7 @@ set completeopt=menu,menuone 								  " 关闭补全描述窗口
 let g:ycm_disable_for_files_larger_than_kb = 5000			  " 文件超过5000kb，禁用补全
 " 自动弹出完整语义补全
 let g:ycm_semantic_triggers = {
-	\   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : [ 're!^', 're!^\s+', '. ' ],
+	\   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go,vue' : [ 're!^', 're!^\s+', '. ' ],
     \   'css': [ 're!^', 're!^\s+', ': ' ],
     \   'scss': [ 're!^', 're!^\s+', ': ' ],
     \   'less': [ 're!^', 're!^\s+', ': ' ],
