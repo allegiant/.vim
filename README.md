@@ -1,4 +1,8 @@
-# .vim
+# 一. ideavimrc
+```cmd
+    mklink C:\Users\yxu.ARCVIDEO\_ideavimrc c:\vim\.vim\.ideavimrc
+```
+# 二. vim
 vim配置
 ## 获取配置文件
 ```cmd
