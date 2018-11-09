@@ -27,6 +27,7 @@ Plug 'MikeCoder/open-in-browser.vim'
 Plug 'ap/vim-css-color'
 Plug 'alvan/vim-closetag'
 Plug 'posva/vim-vue' | Plug 'w0rp/ale'
+Plug 'albanm/vuetify-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'	"""""""webdev图标
 Plug 'junegunn/vim-easy-align' 		"""""""""""快速对齐
