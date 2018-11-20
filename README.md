@@ -16,6 +16,9 @@ vim配置
 - tern_for_vim
 	> 1.安装 node.js
 	> 2.进入tern_for_vim目录,执行npm install
+    ```cmd
+        mklink C:\Users\alleg\.tern-config c:\vim\.vim\.tern-config
+    ```
 - vim-vue
 	> 1.执行 npm i -g eslint eslint-plugin-vue
 	> 2.创建 .eslintrc.js
