@@ -6,8 +6,6 @@ vmap "+y " 选中状态下 Ctrl+c 复制
 
 map <C-n> :NERDTreeToggle<CR> " 打开/关闭 NERDTree
 
-map <C-b> :OpenInBrowser<CR>  " 在浏览器中打开
-
 nmap <Leader>r <Plug>(quickrun)
 map <F10> :QuickRun<CR>
 

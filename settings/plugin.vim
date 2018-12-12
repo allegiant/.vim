@@ -23,7 +23,6 @@ Plug 'Valloric/YouCompleteMe' | Plug 'tenfyzhong/CompleteParameter.vim'
 Plug 'ternjs/tern_for_vim'
 Plug 'Raimondi/delimitMate'             """""""符号自动补全
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'                 """""""代码片段
-Plug 'MikeCoder/open-in-browser.vim'
 Plug 'ap/vim-css-color'
 Plug 'alvan/vim-closetag'
 Plug 'posva/vim-vue' | Plug 'w0rp/ale'
@@ -53,7 +52,6 @@ if g:isWIN
 	source $VIM/.vim/settings/config/quickrun.vim
 	source $VIM/.vim/settings/config/YouCompleteMe.vim
 	source $VIM/.vim/settings/config/ultisnips.vim
-	source $VIM/.vim/settings/config/OpenInBrowser.vim
 	source $VIM/.vim/settings/config/closetag.vim
 	source $VIM/.vim/settings/config/delimitMate.vim
 	source $VIM/.vim/settings/config/ALE.vim
@@ -64,7 +62,6 @@ else
 	source ~/.vim/settings/config/quickrun.vim
 	source ~/.vim/settings/config/YouCompleteMe.vim
 	source ~/.vim/settings/config/ultisnips.vim
-	source ~/.vim/settings/config/OpenInBrowser.vim
 	source ~/.vim/settings/config/closetag.vim
 	source ~/.vim/settings/config/delimitMate.vim
 	source ~/.vim/settings/config/ALE.vim
