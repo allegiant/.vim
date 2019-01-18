@@ -10,7 +10,6 @@ if g:isWIN
   colorscheme gruvbox
   set guifont=DejaVuSansMono\ YaHei\ NF:h11
   set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
-  set renderoptions=type:directx,renmode:5,taamode:1 "使用directx2d渲染"
 elseif g:isMAC
 
   colorscheme gruvbox
