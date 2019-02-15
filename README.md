@@ -12,7 +12,7 @@ vim配置
   ```cmd
       mklink c:\vim\.vimrc c:\vim\.vim\vimrc
  ```
-## 插件安装
+## 插件安装（待删除）
 - tern_for_vim
 	> 1.安装 node.js
 	> 2.进入tern_for_vim目录,执行npm install
