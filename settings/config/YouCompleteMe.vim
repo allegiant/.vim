@@ -8,14 +8,17 @@ let g:ycm_add_preview_to_completeopt = 0					  " 不打预览窗口
 let g:ycm_show_diagnostics_ui = 0                             " 关闭显示诊断信息
 let g:ycm_server_log_level = 'info'							  " 日志等级
 let g:ycm_complete_in_strings=1								  "在字符串输入中也能补全
-set completeopt=menu,menuone 								  " 关闭补全描述窗口
+"set completeopt=menu,menuone 								  " 关闭补全描述窗口
 let g:ycm_disable_for_files_larger_than_kb = 5000			  " 文件超过5000kb，禁用补全
+let g:ycm_max_num_candidates = 25                             " 基于语义补全列数
+let g:ycm_max_num_identifier_candidates = 10                  " 基于标识符补全列数
 " 自动弹出完整语义补全
 let g:ycm_semantic_triggers = {
-	\   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go,vue' : [ 're!^', 're!^\s+', '. ' ],
+	\   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go,vue，html' : [ 're!^', 're!^\s+', '. ' ],
     \   'css': [ 're!^', 're!^\s+', ': ' ],
     \   'scss': [ 're!^', 're!^\s+', ': ' ],
     \   'less': [ 're!^', 're!^\s+', ': ' ],
     \ }
+let g:ycm_key_invoke_completion = '<A-/>'
 "----------------------youcompleteme设置 end----------------------"
 

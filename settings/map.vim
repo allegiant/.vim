@@ -17,16 +17,16 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 "----------------------ultisnips设置 end ------------------------------------"
 
 "--------------------CompleteParameter.vim设置 begin ------------------------"
-inoremap <silent><expr> ( complete_parameter#pre_complete("()")
-smap <tab> <Plug>(complete_parameter#goto_next_parameter)
-imap <tab> <Plug>(complete_parameter#goto_next_parameter)
-smap <s-tab> <Plug>(complete_parameter#goto_previous_parameter)
-imap <s-tab> <Plug>(complete_parameter#goto_previous_parameter)
-let g:complete_parameter_use_ultisnips_mapping = 1
-if !exists('g:neocomplete#force_omni_input_patterns')
-    let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
+"""inoremap <silent><expr> ( complete_parameter#pre_complete("()")
+"""smap <tab> <Plug>(complete_parameter#goto_next_parameter)
+"""imap <tab> <Plug>(complete_parameter#goto_next_parameter)
+"""smap <s-tab> <Plug>(complete_parameter#goto_previous_parameter)
+"""imap <s-tab> <Plug>(complete_parameter#goto_previous_parameter)
+"""let g:complete_parameter_use_ultisnips_mapping = 1
+"""if !exists('g:neocomplete#force_omni_input_patterns')
+"""    let g:neocomplete#force_omni_input_patterns = {}
+"""endif
+"""let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
 "--------------------CompleteParameter.vim设置 end --------------------------"
 
 "--------------------markdown-preview.vim设置 begin -------------------------"
