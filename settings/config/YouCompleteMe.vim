@@ -14,7 +14,7 @@ let g:ycm_max_num_candidates = 25                             " 基于语义补�
 let g:ycm_max_num_identifier_candidates = 10                  " 基于标识符补全列数
 " 自动弹出完整语义补全
 let g:ycm_semantic_triggers = {
-	\   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go,vue，html' : [ 're!^', 're!^\s+', '. ' ],
+	\   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go,vue，html' : ['re!\w{2}'],
     \   'css': [ 're!^', 're!^\s+', ': ' ],
     \   'scss': [ 're!^', 're!^\s+', ': ' ],
     \   'less': [ 're!^', 're!^\s+', ': ' ],
