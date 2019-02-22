@@ -11,7 +11,7 @@ map <F10> :QuickRun<CR>
 
 "----------------------ultisnips设置 begin ----------------------------------"
 let g:UltiSnipsExpandTrigger       = "<a-j>"
-let g:UltiSnipsListSnippets        = "<c-tab>"
+let g:UltiSnipsListSnippets        = "<Leader><tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 "----------------------ultisnips设置 end ------------------------------------"

@@ -21,7 +21,12 @@ else
   set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
 endif
 
-"set cursorline " 突出显示当前行
+"窗口启动位置
+winpos 555 300
+"窗口大小
+set lines=30 columns=100
+
+set cursorline " 突出显示当前行
 set hlsearch
 set number
 " 分割出来的窗口位于当前窗口下边/右边
