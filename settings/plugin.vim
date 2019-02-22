@@ -18,19 +18,20 @@ Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'thinca/vim-quickrun'              """""""快速运行
+Plug 'thinca/vim-quickrun'                                                          """""""""""快速运行
 Plug 'Valloric/YouCompleteMe' "| Plug 'tenfyzhong/CompleteParameter.vim'
 "Plug 'ternjs/tern_for_vim'
-Plug 'Raimondi/delimitMate'             """""""符号自动补全
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'                 """""""代码片段
+Plug  'jiangmiao/auto-pairs'                                                        """""""""""符号自动补全
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'                                 """""""""""代码片段
 Plug 'ap/vim-css-color'
 Plug 'alvan/vim-closetag'
 Plug 'posva/vim-vue' | Plug 'w0rp/ale'
 Plug 'albanm/vuetify-vim'
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'	"""""""webdev图标
-Plug 'junegunn/vim-easy-align' 		"""""""""""快速对齐
+Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'	    """""""""""webdev图标
+Plug 'junegunn/vim-easy-align' 		                                                """""""""""快速对齐
 Plug 'mhinz/vim-signify'
+Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }                                  """""""""""搜索
 
 call plug#end()
 """""""""""""""""""""""""""""""""" 插件管理结束 """"""""""""""""""""""""""""""""""""""""
