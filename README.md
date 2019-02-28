@@ -2,7 +2,13 @@
 ```cmd
     mklink C:\Users\yxu.ARCVIDEO\_ideavimrc c:\vim\.vim\.ideavimrc
 ```
-# 二. vim
+# 二. neovim
+```cmd
+    mkdir c:\Neovim\config\nvim\site
+    setx XDG_CONFIG_HOME "c:\Neovim\config\nvim"
+    setx XDG_DATA_HOME "c:\Neovim\config\nvim\site"
+```
+# 三. vim
 vim配置
 ## 获取配置文件
 ```cmd

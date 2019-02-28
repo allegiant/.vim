@@ -19,13 +19,13 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'thinca/vim-quickrun'                                                          """""""""""快速运行
-Plug 'Valloric/YouCompleteMe' "| Plug 'tenfyzhong/CompleteParameter.vim'
+"Plug 'Valloric/YouCompleteMe' "| Plug 'tenfyzhong/CompleteParameter.vim'
 "Plug 'ternjs/tern_for_vim'
 Plug 'jiangmiao/auto-pairs'                                                        """""""""""符号自动补全
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'                                 """""""""""代码片段
 Plug 'ap/vim-css-color'
-Plug 'alvan/vim-closetag'
-Plug 'posva/vim-vue' | Plug 'w0rp/ale'
+"Plug 'alvan/vim-closetag'
+"Plug 'posva/vim-vue' | Plug 'w0rp/ale'
 Plug 'albanm/vuetify-vim'
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'	    """""""""""webdev图标
@@ -33,6 +33,7 @@ Plug 'junegunn/vim-easy-align' 		                                               
 Plug 'mhinz/vim-signify'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }                                  """""""""""搜索
 Plug 'Chiel92/vim-autoformat'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 call plug#end()
 """""""""""""""""""""""""""""""""" 插件管理结束 """"""""""""""""""""""""""""""""""""""""
@@ -57,6 +58,7 @@ if g:isWIN
 	source $VIM/.vim/settings/config/closetag.vim
 	source $VIM/.vim/settings/config/ALE.vim
 	source $VIM/.vim/settings/config/vue.vim
+    source $VIM/.vim/settings/config/coc.vim
 else
 	source ~/.vim/settings/config/NERDTree.vim
 	source ~/.vim/settings/config/airline.vim
