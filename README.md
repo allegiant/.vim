@@ -9,6 +9,8 @@
     setx XDG_DATA_HOME "c:\Neovim"
     git clone https://github.com/allegiant/.vim.git c:\Neovim\share\nvim\.vim
     mklink c:\Neovim\nvim\init.vim c:\Neovim\share\nvim\.vim\vimrc 
+    mklink c:\Neovim\nvim\ginit.vim c:\Neovim\share\nvim\.vim\ginit.vim
+
 ```
 # 三. vim
 vim配置
