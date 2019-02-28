@@ -13,7 +13,9 @@ else
 endif
 
 if has('nvim')
-    let g:isNVIM
+    let g:isNVIM = 1
+else
+    let g:isNVIM = 0
 endif
 
 " 判断是否处于GUI界面

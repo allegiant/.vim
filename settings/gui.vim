@@ -1,8 +1,10 @@
 ﻿filetype plugin indent on " 加载插件和支持缩进
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-if g:isWIN
-  source $VIMRUNTIME/mswin.vim
+if !g:isNVIM
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
+    if g:isWIN
+        source $VIMRUNTIME/mswin.vim
+    endif
 endif
 
 " 设置着色模式和字体
@@ -22,7 +24,9 @@ else
 endif
 
 "窗口启动位置
-winpos 555 300
+if !g:isNVIM
+    winpos 555 300
+endif
 "窗口大小
 set lines=30 columns=100
 
