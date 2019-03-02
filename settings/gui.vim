@@ -1,10 +1,8 @@
 ﻿filetype plugin indent on " 加载插件和支持缩进
-if !g:isNVIM
-    source $VIMRUNTIME/delmenu.vim
-    source $VIMRUNTIME/menu.vim
-    if g:isWIN
-        source $VIMRUNTIME/mswin.vim
-    endif
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+if g:isWIN
+    source $VIMRUNTIME/mswin.vim
 endif
 
 " 设置着色模式和字体
