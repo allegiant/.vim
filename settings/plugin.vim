@@ -24,10 +24,8 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'                             
 Plug 'ap/vim-css-color'
 Plug 'alvan/vim-closetag'
 Plug 'posva/vim-vue' | Plug 'w0rp/ale'
-Plug 'albanm/vuetify-vim'
 Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'	    """""""""""webdev图标
 Plug 'junegunn/vim-easy-align' 		                                                """""""""""快速对齐
-Plug 'mhinz/vim-signify'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }                                  """""""""""搜索
 Plug 'Chiel92/vim-autoformat'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
@@ -50,7 +48,6 @@ if g:isWIN
 	source $VIM/.vim/settings/config/NERDTree.vim
 	source $VIM/.vim/settings/config/airline.vim
 	source $VIM/.vim/settings/config/quickrun.vim
-	source $VIM/.vim/settings/config/YouCompleteMe.vim
 	source $VIM/.vim/settings/config/ultisnips.vim
 	source $VIM/.vim/settings/config/closetag.vim
 	source $VIM/.vim/settings/config/ALE.vim
@@ -60,11 +57,11 @@ else
 	source ~/.vim/settings/config/NERDTree.vim
 	source ~/.vim/settings/config/airline.vim
 	source ~/.vim/settings/config/quickrun.vim
-	source ~/.vim/settings/config/YouCompleteMe.vim
 	source ~/.vim/settings/config/ultisnips.vim
 	source ~/.vim/settings/config/closetag.vim
 	source ~/.vim/settings/config/ALE.vim
 	source ~/.vim/settings/config/vue.vim
+    source ~/.vim/settings/config/coc.vim
 endif
 
 """""""""""""""""""""""""""""""""" 插件配置end """"""""""""""""""""""""""""""""""""""""

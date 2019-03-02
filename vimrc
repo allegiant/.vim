@@ -26,13 +26,7 @@ else
 endif
 
 
-if g:isNVIM
-	source $XDG_CONFIG_HOME/share/nvim/.vim/settings/base.vim
-	source $XDG_CONFIG_HOME/share/nvim/.vim/autoload/plug.vim
-	source $XDG_CONFIG_HOME/share/nvim/.vim/settings/plugin.vim
-	source $XDG_CONFIG_HOME/share/nvim/.vim/settings/gui.vim
-	source $XDG_CONFIG_HOME/share/nvim/.vim/settings/map.vim
-else 
+
     if g:isWIN
 	    source $VIM/.vim/settings/base.vim
 	    source $VIM/.vim/autoload/plug.vim
@@ -46,5 +40,4 @@ else
 	    source ~/.vim/settings/gui.vim
 	    source ~/.vim/settings/map.vim
     endif
-endif
 
