@@ -46,3 +46,8 @@ nmap <silent> <a-j> <Plug>(ale_next_wrap)
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 "--------------------vim-easy-align设置 end ----------------------------------"
+
+"--------------------coc.vim设置 begin -------------------------"
+nmap <Leader>af :call CocActionAsync('format')<CR>  " 普通模式
+imap <Leader>af :call CocActionAsync('format')<CR>  " 插入模式
+"--------------------coc.vim设置 end ---------------------------"
