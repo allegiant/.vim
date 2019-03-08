@@ -1,6 +1,5 @@
 
 function! s:open_fileInBrowser()
-    echo "dsafasf"
     execute 'OpenBrowser '.expand('%:p')
 endfunction
 
