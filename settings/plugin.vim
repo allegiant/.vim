@@ -28,6 +28,7 @@ Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'	 
 Plug 'junegunn/vim-easy-align' 		                                                """""""""""快速对齐
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }                                  """""""""""搜索
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'tyru/open-browser.vim'
 
 call plug#end()
 """""""""""""""""""""""""""""""""" 插件管理结束 """"""""""""""""""""""""""""""""""""""""
@@ -52,6 +53,7 @@ if g:isWIN
 	source $VIM/.vim/settings/config/ALE.vim
 	source $VIM/.vim/settings/config/vue.vim
     source $VIM/.vim/settings/config/coc.vim
+    source $VIM/.vim/settings/config/openBrowser.vim
 else
 	source ~/.vim/settings/config/NERDTree.vim
 	source ~/.vim/settings/config/airline.vim
