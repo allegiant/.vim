@@ -11,9 +11,6 @@ let g:airline#extensions#tabline#buffers_label = 'Buffers'
 let g:airline#extensions#tabline#tabs_label = 'Tabs'
 let g:airline#extensions#tabline#show_tab_type = 1
 
-
-
-
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
