@@ -17,7 +17,7 @@ Plug 'iamcco/mathjax-support-for-mkdp' | Plug 'iamcco/markdown-preview.vim'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'thinca/vim-quickrun'                                                          """""""""""快速运行
 Plug 'jiangmiao/auto-pairs'                                                        """""""""""符号自动补全
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'                                 """""""""""代码片段
@@ -29,7 +29,7 @@ Plug 'junegunn/vim-easy-align' 		                                               
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }                                  """""""""""搜索
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'tyru/open-browser.vim'
-
+Plug 'itchyny/lightline.vim' | Plug 'taohexxx/lightline-buffer'
 call plug#end()
 """""""""""""""""""""""""""""""""" 插件管理结束 """"""""""""""""""""""""""""""""""""""""
 " PlugInstall [name ...] [#threads]   Install plugins
@@ -46,7 +46,7 @@ call plug#end()
 
 if g:isWIN
 	source $VIM/.vim/settings/config/NERDTree.vim
-	source $VIM/.vim/settings/config/airline.vim
+	source $VIM/.vim/settings/config/lightline.vim
 	source $VIM/.vim/settings/config/quickrun.vim
 	source $VIM/.vim/settings/config/ultisnips.vim
 	source $VIM/.vim/settings/config/closetag.vim
@@ -64,5 +64,4 @@ else
 	source ~/.vim/settings/config/vue.vim
     source ~/.vim/settings/config/coc.vim
 endif
-
 """""""""""""""""""""""""""""""""" 插件配置end """"""""""""""""""""""""""""""""""""""""

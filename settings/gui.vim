@@ -8,8 +8,8 @@ endif
 " 设置着色模式和字体
 if g:isWIN
   colorscheme gruvbox
-  set guifont=DejaVuSansMono\ YaHei\ NF:h11
-  set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+  set guifontwide=DejaVu\ Sans\ Mono\ for\ Powerline:h11
 elseif g:isMAC
 
   colorscheme gruvbox
@@ -40,4 +40,4 @@ set guioptions-=m
 set guioptions-=L
 set guioptions-=r
 set guioptions-=b
-set showtabline=0 "隐藏Tab栏
+set showtabline=2 "隐藏Tab栏
