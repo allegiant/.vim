@@ -8,8 +8,10 @@ endif
 " 设置着色模式和字体
 if g:isWIN
   colorscheme gruvbox
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
-  set guifontwide=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+  if !g:isNVIM
+    set guifont=DejaVuSansMono\ YaHei\ NF:h11
+    set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
+  endif
 elseif g:isMAC
 
   colorscheme gruvbox
