@@ -30,6 +30,8 @@ Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }                              
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'tyru/open-browser.vim'
 Plug 'itchyny/lightline.vim' | Plug 'taohexxx/lightline-buffer'
+Plug 'pearofducks/ansible-vim'
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 """""""""""""""""""""""""""""""""" 插件管理结束 """"""""""""""""""""""""""""""""""""""""
 " PlugInstall [name ...] [#threads]   Install plugins
@@ -54,6 +56,8 @@ if g:isWIN
 	source $VIM/.vim/settings/config/vue.vim
     source $VIM/.vim/settings/config/coc.vim
     source $VIM/.vim/settings/config/openBrowser.vim
+    source $VIM/.vim/settings/config/ansible.vim
+
 else
 	source ~/.vim/settings/config/NERDTree.vim
 	source ~/.vim/settings/config/airline.vim
