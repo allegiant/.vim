@@ -4,7 +4,7 @@ let g:mapleader = ';'
 
 vmap "+y " 选中状态下 Ctrl+c 复制
 
-map <C-n> :NERDTreeToggle<CR> " 打开/关闭 NERDTree
+map <C-n> :NERDTreeTabsToggle<CR> " 打开/关闭 NERDTree
 nmap <Leader>r <Plug>(quickrun)
 map <F10> :QuickRun<CR>
 
