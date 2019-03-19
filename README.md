@@ -10,8 +10,10 @@
     git clone https://github.com/allegiant/.vim.git c:\Neovim\share\nvim\.vim
     mklink c:\Neovim\nvim\init.vim c:\Neovim\share\nvim\.vim\vimrc 
     mklink c:\Neovim\nvim\ginit.vim c:\Neovim\share\nvim\.vim\ginit.vim
+    mklink c:\Neovim\nvim\coc-settings.json C:\Neovim\share\nvim\.vim\coc-settings.json
 
 ```
+## 安装ctags
 # 三. vim
 vim配置
 ## 获取配置文件
