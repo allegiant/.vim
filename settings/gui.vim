@@ -7,7 +7,7 @@ endif
 
 " 设置着色模式和字体
 if g:isWIN
-  colorscheme gruvbox
+    colorscheme gruvbox
   if !g:isNVIM
     set guifont=DejaVuSansMono\ YaHei\ NF:h11
     set guifontwide=DejaVuSansMono\ YaHei\ NF:h11
