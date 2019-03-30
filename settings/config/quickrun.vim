@@ -14,3 +14,7 @@ let g:quickrun_config.less = {
 		\   'exec': '%c %o %s  %s:p:r.css',
 	    \ }
 "------------------------less编译 end   -------------------------"
+let g:quickrun_config.dart= {
+		\   'command': 'dart',
+		\   'exec': '%c  %s:p:r.dart',
+        \}

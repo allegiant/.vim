@@ -5,6 +5,20 @@
     "suggest.acceptSuggestionOnCommitCharacter": true,
     "suggest.minTriggerInputLength": 2,
     "suggest.numberSelect": true,
-    
-    "vetur.format.options.tabSize": 4
+
+    "vetur.format.options.tabSize": 4,
+    "languageserver": {
+        "dart": {
+            "command": "dart_language_server.bat",
+            "args": [],
+            "filetypes": ["dart"],
+            "initializationOptions": {},
+            "settings": {
+                "dart": {
+                    "validation": {},
+                    "completion": {}
+                }
+            }
+        }
+    }
 }

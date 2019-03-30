@@ -27,6 +27,7 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'tyru/open-browser.vim'
 Plug 'pearofducks/ansible-vim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 """""""""""""""""""""""""""""""""" 插件管理结束 """"""""""""""""""""""""""""""""""""""""
 " PlugInstall [name ...] [#threads]   Install plugins
