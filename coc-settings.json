@@ -10,9 +10,7 @@
         "dart": {
             "command": "dart_language_server.bat",
             "args": [],
-            "filetypes": [
-                "dart"
-            ],
+            "filetypes": ["dart"],
             "initializationOptions": {},
             "settings": {
                 "dart": {
