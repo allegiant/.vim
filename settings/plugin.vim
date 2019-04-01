@@ -52,6 +52,7 @@ if g:isWIN
     source $VIM/.vim/settings/config/coc.vim
     source $VIM/.vim/settings/config/openBrowser.vim
     source $VIM/.vim/settings/config/ansible.vim
+    source $VIM/.vim/settings/config/leaderf.vim
 
 else
     source ~/.vim/settings/config/NERDTree.vim
