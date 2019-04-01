@@ -4,7 +4,7 @@
     "suggest.preferCompleteThanJumpPlaceholder": false,
     "suggest.acceptSuggestionOnCommitCharacter": true,
     "suggest.minTriggerInputLength": 2,
-    "suggest.numberSelect": true,
+    "suggest.numberSelect": false,
     "vetur.format.options.tabSize": 4,
     "languageserver": {
         "dart": {
