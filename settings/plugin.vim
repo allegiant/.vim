@@ -23,11 +23,10 @@ Plug 'posva/vim-vue' | Plug 'w0rp/ale'
 Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'      """""""""""webdev图标
 Plug 'junegunn/vim-easy-align'                                                      """""""""""快速对齐
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }                                  """""""""""搜索
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', { 'do': 'yarn install' }
 Plug 'tyru/open-browser.vim'
 Plug 'pearofducks/ansible-vim'
 Plug 'Chiel92/vim-autoformat'
-Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 """""""""""""""""""""""""""""""""" 插件管理结束 """"""""""""""""""""""""""""""""""""""""
 " PlugInstall [name ...] [#threads]   Install plugins
