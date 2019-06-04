@@ -27,6 +27,7 @@ Plug 'neoclide/coc.nvim', { 'do': 'yarn install' }
 Plug 'tyru/open-browser.vim'
 Plug 'pearofducks/ansible-vim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'fatih/vim-go'
 call plug#end()
 """""""""""""""""""""""""""""""""" 插件管理结束 """"""""""""""""""""""""""""""""""""""""
 " PlugInstall [name ...] [#threads]   Install plugins
@@ -53,6 +54,7 @@ if g:isWIN
     source $VIM/.vim/settings/config/openBrowser.vim
     source $VIM/.vim/settings/config/ansible.vim
     source $VIM/.vim/settings/config/leaderf.vim
+    source $VIM/.vim/settings/config/vim-go.vim
 
 else
     source ~/.vim/settings/config/NERDTree.vim
@@ -65,6 +67,8 @@ else
     source ~/.vim/settings/config/coc.vim
     source ~/.vim/settings/config/openBrowser.vim
     source ~/.vim/settings/config/ansible.vim
+    source ~/.vim/settings/config/LeaderF.vim
+    source ~/.vim/settings/config/vim-go.vim
 
 endif
 """""""""""""""""""""""""""""""""" 插件配置end """"""""""""""""""""""""""""""""""""""""
