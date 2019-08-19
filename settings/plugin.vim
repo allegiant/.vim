@@ -16,7 +16,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } | Plug 'jistr/vim-nerdtr
 Plug 'vim-airline/vim-airline'
 Plug 'thinca/vim-quickrun'                                                          """""""""""快速运行
 "Plug 'jiangmiao/auto-pairs'                                                         """""""""""符号自动补全
-"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'                                 """""""""""代码片段
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'                                 """""""""""代码片段
 Plug 'ap/vim-css-color'
 Plug 'alvan/vim-closetag'
 Plug 'posva/vim-vue' | Plug 'w0rp/ale'
@@ -46,7 +46,7 @@ if g:isWIN
     source $VIM/.vim/settings/config/NERDTree.vim
     source $VIM/.vim/settings/config/airline.vim
     source $VIM/.vim/settings/config/quickrun.vim
-    "source $VIM/.vim/settings/config/ultisnips.vim
+    source $VIM/.vim/settings/config/ultisnips.vim
     source $VIM/.vim/settings/config/closetag.vim
     source $VIM/.vim/settings/config/ALE.vim
     source $VIM/.vim/settings/config/vue.vim
@@ -60,7 +60,7 @@ else
     source ~/.vim/settings/config/NERDTree.vim
     source ~/.vim/settings/config/airline.vim
     source ~/.vim/settings/config/quickrun.vim
-    "source ~/.vim/settings/config/ultisnips.vim
+    source ~/.vim/settings/config/ultisnips.vim
     source ~/.vim/settings/config/closetag.vim
     source ~/.vim/settings/config/ALE.vim
     source ~/.vim/settings/config/vue.vim
