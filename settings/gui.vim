@@ -42,4 +42,3 @@ set guioptions-=m
 set guioptions-=L
 set guioptions-=r
 set guioptions-=b
-set showtabline=2 "隐藏Tab栏

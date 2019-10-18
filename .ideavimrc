@@ -1,6 +1,5 @@
 let mapleader = ';'
 
-set keep-english-in-normal                              " 需要安装IdeaVimExtension插件
 set ignorecase smartcase 								" 搜索时忽略大小写，但在有一个或以上大写字母时仍保持对大小写敏感
 set nowrapscan 											" 禁止在搜索到文件两端时重新搜索
 set incsearch 											" 输入搜索内容时就显示搜索结果
