@@ -22,7 +22,7 @@ Plug 'alvan/vim-closetag'
 Plug 'posva/vim-vue' | Plug 'w0rp/ale'
 Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'      """""""""""webdev图标
 Plug 'junegunn/vim-easy-align'                                                      """""""""""快速对齐
-Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }                                  """""""""""搜索
+Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }                                  """""""""""搜索
 Plug 'neoclide/coc.nvim', { 'do': 'yarn install' }
 Plug 'tyru/open-browser.vim'
 Plug 'pearofducks/ansible-vim'
@@ -67,7 +67,7 @@ else
     source ~/.vim/settings/config/coc.vim
     source ~/.vim/settings/config/openBrowser.vim
     source ~/.vim/settings/config/ansible.vim
-    source ~/.vim/settings/config/LeaderF.vim
+    source ~/.vim/settings/config/leaderf.vim
     source ~/.vim/settings/config/vim-go.vim
 
 endif
