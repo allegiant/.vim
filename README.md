@@ -3,6 +3,7 @@
     mklink C:\Users\yxu.ARCVIDEO\_ideavimrc c:\vim\.vim\.ideavimrc
 ```
 # 二. neovim
+### windows gui
 ```cmd
     mkdir c:\Neovim\nvim\site
     setx XDG_CONFIG_HOME "c:\Neovim"
@@ -11,6 +12,15 @@
     mklink c:\Neovim\nvim\init.vim c:\Neovim\share\nvim\.vim\vimrc 
     mklink c:\Neovim\nvim\ginit.vim c:\Neovim\share\nvim\.vim\ginit.vim
     mklink c:\Neovim\nvim\coc-settings.json C:\Neovim\share\nvim\.vim\coc-settings.json
+    
+
+```
+### linux
+```cmd
+    
+    git clone https://github.com/allegiant/.vim.git ~/.config/nvim
+    ln -s ~/.config/nvim/vimrc ~/.config/nvim/init.vim
+    
 
 ```
 ## 安装ctags
