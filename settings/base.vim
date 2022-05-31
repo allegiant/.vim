@@ -13,7 +13,7 @@ set wildmode=list:full									" 命令模式补全方式
 set nocompatible
 set nobackup
 set noswapfile
-:set nowrap 											" 不自动换行
+set nowrap 											" 不自动换行
 set history=1024
 set autochdir											" 打开文件时，自动 cd 到文件所在目录
 set whichwrap=b,s,<,>,[,]
@@ -21,9 +21,9 @@ set nobomb
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 set clipboard+=unnamed 									" Vim 的默认寄存器和系统剪贴板共享
 set winaltkeys=no 										" 设置 alt 键不映射到菜单栏
-set tabstop=4 											" 设定 tab 长度为 4
-set softtabstop=4 										" 使得按退格键时可以一次删掉 4 个空格
-set shiftwidth=4 										" 设定 << 和 >> 命令移动时的宽度为 4
+set tabstop=2 											" 设定 tab 长度为 4
+set softtabstop=2 										" 使得按退格键时可以一次删掉 4 个空格
+set shiftwidth=2 										" 设定 << 和 >> 命令移动时的宽度为 4
 set ignorecase smartcase 								" 搜索时忽略大小写，但在有一个或以上大写字母时仍保持对大小写敏感
 set nowrapscan 											" 禁止在搜索到文件两端时重新搜索
 " set incsearch 											" 输入搜索内容时就显示搜索结果
@@ -36,6 +36,7 @@ set autoread 											" 当文件在外部被修改时，自动重新读取
 set relativenumber 										" 设置相对行号
 set expandtab											" 将所有Tab展开为空格
 set autoindent											" 换行时保持当前行的缩进
+set cmdheight=1                     "命令栏高度"
 
 """""""""""""""""""""""""""""""""""" 编码设置 begin """"""""""""""""""""""""""""""""""""""""""""""
 set fenc=utf-8
@@ -47,4 +48,4 @@ set fileencodings=utf-8,gbk2312,gbk,gb18030,cp936
 set langmenu=zh_CN
 let $LANG = 'en_US.UTF-8'
 """"""""""""""""""""""""""""""""""" 编码设置  end """""""""""""""""""""""""""""""""""""""""""""""""
-
+autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
