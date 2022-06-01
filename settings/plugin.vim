@@ -6,14 +6,15 @@ let path='~/.vim/bundle'
 
 " vim-plug 管理的插件列表必须位于 plug#begin() 和 plug#end() 之间
 call plug#begin(path)
-Plug 'sainnhe/gruvbox-material'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } | Plug 'jistr/vim-nerdtree-tabs'
+" Plug 'sainnhe/gruvbox-material'
+Plug 'lifepillar/vim-gruvbox8'
+Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'                                 """""""""""代码片段
 Plug 'alvan/vim-closetag'
 Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'      """""""""""webdev图标
-Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }                                  """""""""""搜索
-Plug 'neoclide/coc.nvim', { 'do': 'yarn install' }
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'liuchengxu/vim-which-key'
 call plug#end()
