@@ -37,5 +37,6 @@
     "snippet": "\ue60b", //  pair of curly braces
     "typeParameter": "\uf728", //  file presentation box
     "default": "\uf29c" //  question mark in circle
-  }
+  },
+	"volar.autoClosingTags": true
 }
