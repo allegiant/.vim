@@ -13,6 +13,8 @@ Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vim-which-key'
 " Plug 'leafOfTree/vim-vue-plugin'
+Plug 'tpope/vim-commentary'
+Plug 'LunarWatcher/auto-pairs'
 
 call plug#end()
 
