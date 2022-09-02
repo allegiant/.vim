@@ -5,9 +5,10 @@
   "diagnostic.warningSign": " ",
   "diagnostic.infoSign": " ",
   "diagnostic.hintSign": " ",
-  "diagnostic.enableMessage": "jump",
-  "diagnostic.virtualText": true,
-  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.enableMessage": "always",
+  "diagnostic.virtualText": false,
+	"diagnostic.checkCurrentLine": true,
+  "diagnostic.virtualTextCurrentLineOnly": true,
   "suggest.noselect": true,
   "suggest.enablePreselect": true,
   "suggest.completionItemKindLabels": {

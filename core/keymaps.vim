@@ -53,17 +53,22 @@ function! g:Keymap_coc()
 	
 	" Use `[g` and `]g` to navigate diagnostics
 	" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-	nmap <silent> gk <Plug>(coc-diagnostic-prev)
-	nmap <silent> gj <Plug>(coc-diagnostic-next)
+	nmap <silent>gk <Plug>(coc-diagnostic-prev)
+	nmap <silent>gj <Plug>(coc-diagnostic-next)
 	
 	" GoTo code navigation.
-	nmap <silent> gd <Plug>(coc-definition)
-	nmap <silent> gy <Plug>(coc-type-definition)
-	nmap <silent> gi <Plug>(coc-implementation)
-	nmap <silent> gf <Plug>(coc-references)
-	
+	nmap <silent>gd <Plug>(coc-definition)
+	nmap <silent>gy <Plug>(coc-type-definition)
+	nmap <silent>gi <Plug>(coc-implementation)
+	nmap <silent>gf <Plug>(coc-references)
+	nnoremap <silent>ga  <Plug>(coc-codeaction-line)
+	nmap <silent> gr <Plug>(coc-rename)
+	nmap <silent><leader>fm :call CocActionAsync('format')<CR>
+	" Formatting selected code.
+	xmap <leader>fs  <Plug>(coc-format-selected)
+
 	" Use K to show documentation in preview window.
-	nnoremap <silent> gh :call ShowDocumentation()<CR>
+	nnoremap <silent>gh :call ShowDocumentation()<CR>
 	
 	function! ShowDocumentation()
 	  if CocAction('hasProvider', 'hover')
@@ -76,30 +81,13 @@ function! g:Keymap_coc()
 	" Highlight the symbol and its references when holding the cursor.
 	autocmd CursorHold * silent call CocActionAsync('highlight')
 	
-	" Symbol renaming.
-	nmap <silent> gr <Plug>(coc-rename)
-	
-	" Formatting selected code.
-	xmap <leader>f  <Plug>(coc-format-selected)
-	" Formatting all code.
-	nmap <silent><leader>fm :call CocActionAsync('format')<CR>
-	
 	augroup mygroup
-	  autocmd!
-	  " Setup formatexpr specified filetype(s).
-	  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-	  " Update signature help on jump placeholder.
-	  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+		autocmd!
+  	" Setup formatexpr specified filetype(s).
+  	autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  	" Update signature help on jump placeholder.
+  	autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 	augroup end
-	
-	" Remap keys for applying codeAction to the current buffer.
-	nmap <leader>a  <Plug>(coc-codeaction)
-	" Apply AutoFix to problem on the current line.
-	nmap <leader>qf  <Plug>(coc-fix-current)
-	
-	" Run the Code Lens action on the current line.
-	nmap <leader>cl  <Plug>(coc-codelens-action)
-	
 	
 	" Add `:Format` command to format current buffer.
 	command! -nargs=0 Format :call CocActionAsync('format')
@@ -114,6 +102,24 @@ function! g:Keymap_coc()
 	" NOTE: Please see `:h coc-status` for integrations with external plugins that
 	" provide custom statusline: lightline.vim, vim-airline.
 	set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+	" Mappings for CoCList
+	" Show all diagnostics.
+	nnoremap <silent><nowait><leader>ca  :<C-u>CocList diagnostics<cr>
+	" Manage extensions.
+	nnoremap <silent><nowait><leader>ce  :<C-u>CocList extensions<cr>
+	" Show commands.
+	nnoremap <silent><nowait><leader>cc  :<C-u>CocList commands<cr>
+	" Find symbol of current document.
+	nnoremap <silent><nowait><leader>co  :<C-u>CocList outline<cr>
+	" Search workspace symbols.
+	nnoremap <silent><nowait><leader>cs  :<C-u>CocList -I symbols<cr>
+	" Do default action for next item.
+	nnoremap <silent><nowait><leader>cj  :<C-u>CocNext<CR>
+	" Do default action for previous item.
+	nnoremap <silent><nowait><leader>ck  :<C-u>CocPrev<CR>
+	" Resume latest coc list.
+	nnoremap <silent><nowait><leader>cp  :<C-u>CocListResume<CR>
 endfunction
 
 function! g:Keymap_nerdtree()
@@ -144,4 +150,14 @@ function! g:Keymap_lightline()
 	nmap <Leader>d8 <Plug>lightline#bufferline#delete(8)
 	nmap <Leader>d9 <Plug>lightline#bufferline#delete(9)
 	nmap <Leader>d0 <Plug>lightline#bufferline#delete(10)
+endfunction
+
+function! g:Keymap_floaterm()
+	nnoremap   <silent>   <C-\>   :FloatermToggle<CR>
+	tnoremap   <silent>   <C-\>   <C-\><C-n>:FloatermToggle<CR>
+endfunction
+
+function! g:Keymap_gitgutter()
+	nnoremap <silent><leader>sj <Plug>(GitGutterNextHunk)<CR>
+	nnoremap <silent><leader>sk  <Plug>(GitGutterPrevHunk)<CR>
 endfunction

@@ -10,16 +10,28 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'      """""""""""webdev图标
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vim-which-key'
-" Plug 'leafOfTree/vim-vue-plugin'
 Plug 'tpope/vim-commentary'
-Plug 'LunarWatcher/auto-pairs'
+" Plug 'LunarWatcher/auto-pairs'
+Plug 'voldikss/vim-floaterm'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'yaegassy/coc-volar', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'fannheyward/coc-marketplace', {'do': 'yarn install --frozen-lockfile'}
+Plug 'iamcco/coc-vimlsp', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-pairs', {'do': 'yarn install --frozen-lockfile'}
+
+
 
 call plug#end()
 
 IncScript core/config/NERDTree.vim
 IncScript core/config/lightline.vim
-IncScript core/config/coc.vim
 IncScript core/config/leaderf.vim
-IncScript core/config/vue-plugin.vim
+IncScript core/config/floaterm.vim
+IncScript core/config/gitgutter.vim
+IncScript core/config/coc.vim
+

@@ -13,4 +13,6 @@ set updatetime=300
 " diagnostics appear/become resolved.
 set signcolumn=yes
 
+autocmd FileType vue let b:coc_pairs_disabled = ['<']
+
 call g:Keymap_coc()
