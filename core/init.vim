@@ -107,6 +107,7 @@ set showmatch
  set matchtime=2
 " 允许下方显示目录
 set wildmenu
+set wildmode=longest:full,full
 
 " 延迟绘制（提升性能）
 set lazyredraw
