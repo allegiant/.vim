@@ -111,3 +111,6 @@ set wildmode=longest:full,full
 
 " 延迟绘制（提升性能）
 set lazyredraw
+
+" 补全菜单长度
+set pumheight=10
