@@ -35,4 +35,5 @@ IncScript core/config/leaderf.vim
 IncScript core/config/floaterm.vim
 IncScript core/config/gitgutter.vim
 IncScript core/config/coc.vim
+IncScript core/config/whichkey.vim
 

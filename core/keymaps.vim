@@ -4,9 +4,10 @@
 "
 "
 "======================================================================
-
+   
 let g:mapleader = "\<Space>"
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
+
 
 "----------------------------------------------------------------------
 " window control
@@ -27,99 +28,62 @@ noremap <leader>y yiw
 noremap <C-S> :w<cr>
 inoremap <C-S> <ESC>:w<cr>
 
+function! g:Keymap_win()
+
+	let g:which_key_map['w'] = {
+      \ 'name' : '+windows' ,
+      \ 'w' : ['<C-W>w'     , 'other-window']          ,
+      \ 'd' : ['<C-W>c'     , 'delete-window']         ,
+      \ '-' : ['<C-W>s'     , 'split-window-below']    ,
+      \ '|' : ['<C-W>v'     , 'split-window-right']    ,
+      \ '2' : ['<C-W>v'     , 'layout-double-columns'] ,
+      \ 'h' : ['<C-W>h'     , 'window-left']           ,
+      \ 'j' : ['<C-W>j'     , 'window-below']          ,
+      \ 'l' : ['<C-W>l'     , 'window-right']          ,
+      \ 'k' : ['<C-W>k'     , 'window-up']             ,
+      \ 'H' : ['<C-W>5<'    , 'expand-window-left']    ,
+      \ 'J' : [':resize +5'  , 'expand-window-below']  ,
+      \ 'L' : ['<C-W>5>'    , 'expand-window-right']   ,
+      \ 'K' : [':resize -5'  , 'expand-window-up']		 ,
+      \ '=' : ['<C-W>='     , 'balance-window']        ,
+      \ 's' : ['<C-W>s'     , 'split-window-below']    ,
+      \ 'v' : ['<C-W>v'     , 'split-window-below']    ,
+      \ '?' : ['Windows'    , 'fzf-window']            ,
+      \ }
+	
+endfunction
+
+
+
 function! g:Keymap_coc()
-	inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-	inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-	" Make <CR> to accept selected completion item or notify coc.nvim to format
-	" <C-g>u breaks current undo, please make your own choice.
-	inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-	                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-	
-	function! CheckBackspace() abort
-	  let col = col('.') - 1
-	  return !col || getline('.')[col - 1]  =~# '\s'
-	endfunction
-	
-	" Use <c-space> to trigger completion.
-	if has('nvim')
-	  inoremap <silent><expr> <c-space> coc#refresh()
-	else
-	  inoremap <silent><expr> <c-@> coc#refresh()
-	endif
-	
-	" Use `[g` and `]g` to navigate diagnostics
-	" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-	nmap <silent>gk <Plug>(coc-diagnostic-prev)
-	nmap <silent>gj <Plug>(coc-diagnostic-next)
-	
-	" GoTo code navigation.
-	nmap <silent>gd <Plug>(coc-definition)
-	nmap <silent>gy <Plug>(coc-type-definition)
-	nmap <silent>gi <Plug>(coc-implementation)
-	nmap <silent>gf <Plug>(coc-references)
-	nnoremap <silent>ga  <Plug>(coc-codeaction-line)
-	nmap <silent> gr <Plug>(coc-rename)
-	nmap <silent><leader>fm :call CocActionAsync('format')<CR>
-	" Formatting selected code.
-	xmap <leader>fs  <Plug>(coc-format-selected)
-
-	" Use K to show documentation in preview window.
-	nnoremap <silent>gh :call ShowDocumentation()<CR>
-	
-	function! ShowDocumentation()
-	  if CocAction('hasProvider', 'hover')
-	    call CocActionAsync('doHover')
-	  else
-	    call feedkeys('K', 'in')
-	  endif
-	endfunction
-	
-	" Highlight the symbol and its references when holding the cursor.
-	autocmd CursorHold * silent call CocActionAsync('highlight')
-	
-	augroup mygroup
-		autocmd!
-  	" Setup formatexpr specified filetype(s).
-  	autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  	" Update signature help on jump placeholder.
-  	autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-	augroup end
-	
-	" Add `:Format` command to format current buffer.
-	command! -nargs=0 Format :call CocActionAsync('format')
-	
-	" Add `:Fold` command to fold current buffer.
-	command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-	
-	" Add `:OR` command for organize imports of the current buffer.
-	command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
-	
-	" Add (Neo)Vim's native statusline support.
-	" NOTE: Please see `:h coc-status` for integrations with external plugins that
-	" provide custom statusline: lightline.vim, vim-airline.
-	set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-	" Mappings for CoCList
-	" Show all diagnostics.
-	nnoremap <silent><nowait><leader>ca  :<C-u>CocList diagnostics<cr>
-	" Manage extensions.
-	nnoremap <silent><nowait><leader>ce  :<C-u>CocList extensions<cr>
-	" Show commands.
-	nnoremap <silent><nowait><leader>cc  :<C-u>CocList commands<cr>
-	" Find symbol of current document.
-	nnoremap <silent><nowait><leader>co  :<C-u>CocList outline<cr>
-	" Search workspace symbols.
-	nnoremap <silent><nowait><leader>cs  :<C-u>CocList -I symbols<cr>
-	" Do default action for next item.
-	nnoremap <silent><nowait><leader>cj  :<C-u>CocNext<CR>
-	" Do default action for previous item.
-	nnoremap <silent><nowait><leader>ck  :<C-u>CocPrev<CR>
-	" Resume latest coc list.
-	nnoremap <silent><nowait><leader>cp  :<C-u>CocListResume<CR>
+	let g:which_key_map.g = {
+      \ 'name' : '+lsp',
+			\ 'k' : ['<Plug>(coc-diagnostic-prev)'					,	'diagnostic prev']	,
+			\ 'j' : ['<Plug>(coc-diagnostic-next)'					,	'diagnostic next']	,
+			\ 'd' : ['<Plug>(coc-definition)'								,	'definition']				,
+			\ 'y' : ['<Plug>(coc-type-definition)'					,	'type definition']	,
+			\ 'i' : ['<Plug>(coc-implementation)'						,	'implementation']		,
+			\ 'f' : ['<Plug>(coc-references)'								,	'references']				,
+			\ 'h' : [':call ShowDocumentation()<CR>'				,	'show docs']				,
+			\ 'r' : ['<Plug>(coc-rename)'										,	'rename']						,
+			\ 'a' : ['<Plug>(coc-codeaction-cursor)'	,	'code action']			,
+      \ }
+	let g:which_key_map.f = {
+      \ 'name' : '+file',
+			\ 'm' : [':Format'	,			'code Format']	,
+      \ }
+	let g:which_key_map.c = {
+      \ 'name' : '+coc',
+			\ 'a' : [":CocList diagnostics"		,			'CocList diagnostic']			,
+			\ 'e' : [":CocList extensions"		,			'CocList extensions']			,
+			\ 'c' : [":CocList commands"			,			'CocList commands']				,
+			\ 'o' : [":CocList outline"				,			'CocList outline']				,
+			\ 's' : [":CocList -I symbols"		,			'CocList symbols']				,
+			\ 'j' : [":CocList CocNext"				,			'CocList CocNext']				,
+			\ 'k' : [":CocList CocPrev"				,			'CocList CocPrev']				,
+			\ 'p' : [":CocList CocListResume"	,			'CocList CocListResume']	,
+			\ 'm' : [":CocList marketplace"		,			'CocList marketplace']		,
+      \ }
 endfunction
 
 function! g:Keymap_nerdtree()
@@ -129,27 +93,32 @@ endfunction
 function! g:Keymap_lightline()
 	nmap <silent><Tab> :bnext<CR>
 	nmap <silent><S-Tab> :bprev<CR>
+endfunction
 
-	nmap <Leader>1 <Plug>lightline#bufferline#go(1)
-	nmap <Leader>2 <Plug>lightline#bufferline#go(2)
-	nmap <Leader>3 <Plug>lightline#bufferline#go(3)
-	nmap <Leader>4 <Plug>lightline#bufferline#go(4)
-	nmap <Leader>5 <Plug>lightline#bufferline#go(5)
-	nmap <Leader>6 <Plug>lightline#bufferline#go(6)
-	nmap <Leader>7 <Plug>lightline#bufferline#go(7)
-	nmap <Leader>8 <Plug>lightline#bufferline#go(8)
-	nmap <Leader>9 <Plug>lightline#bufferline#go(9)
-	nmap <Leader>0 <Plug>lightline#bufferline#go(10)
-	nmap <Leader>d1 <Plug>lightline#bufferline#delete(1)
-	nmap <Leader>d2 <Plug>lightline#bufferline#delete(2)
-	nmap <Leader>d3 <Plug>lightline#bufferline#delete(3)
-	nmap <Leader>d4 <Plug>lightline#bufferline#delete(4)
-	nmap <Leader>d5 <Plug>lightline#bufferline#delete(5)
-	nmap <Leader>d6 <Plug>lightline#bufferline#delete(6)
-	nmap <Leader>d7 <Plug>lightline#bufferline#delete(7)
-	nmap <Leader>d8 <Plug>lightline#bufferline#delete(8)
-	nmap <Leader>d9 <Plug>lightline#bufferline#delete(9)
-	nmap <Leader>d0 <Plug>lightline#bufferline#delete(10)
+function g:Keymap_buf() abort
+	let g:which_key_map.b = {
+      \ 'name' : '+buffer' ,
+      \ '1' : ['<Plug>lightline#bufferline#go(1)'        , 'buffer 1']        ,
+      \ '2' : ['<Plug>lightline#bufferline#go(2)'        , 'buffer 2']        ,
+      \ '3' : ['<Plug>lightline#bufferline#go(3)'        , 'buffer 3']        ,
+      \ '4' : ['<Plug>lightline#bufferline#go(4)'        , 'buffer 4']        ,
+			\ 'd' : {
+        \ 'name': '+delete',
+        \ '1' : ['<Plug>lightline#bufferline#delete(1)'     , 'delete buf 1']      ,
+        \ '2' : ['<Plug>lightline#bufferline#delete(2)'     , 'delete buf 2']      ,
+        \ '3' : ['<Plug>lightline#bufferline#delete(3)'     , 'delete buf 3']      ,
+        \ '4' : ['<Plug>lightline#bufferline#delete(4)'     , 'delete buf 4']      ,
+        \ '5' : ['<Plug>lightline#bufferline#delete(5)'     , 'delete buf 5']      ,
+        \ '9' : ['<Plug>lightline#bufferline#delete(9)'     , 'delete buf 9']      ,
+        \ },
+      \ 'c' : ['bd'        , 'delete-buffer']   ,
+      \ 'f' : ['bfirst'    , 'first-buffer']    ,
+      \ 'h' : ['Startify'  , 'home-buffer']     ,
+      \ 'l' : ['blast'     , 'last-buffer']     ,
+      \ 'n' : ['bnext'     , 'next-buffer']     ,
+      \ 'p' : ['bprevious' , 'previous-buffer'] ,
+      \ '?' : ['Buffers'   , 'fzf-buffer']      ,
+      \ }
 endfunction
 
 function! g:Keymap_floaterm()
@@ -158,6 +127,10 @@ function! g:Keymap_floaterm()
 endfunction
 
 function! g:Keymap_gitgutter()
-	nnoremap <silent><leader>sj <Plug>(GitGutterNextHunk)<CR>
-	nnoremap <silent><leader>sk  <Plug>(GitGutterPrevHunk)<CR>
+	let g:which_key_map.s = {
+      \ 'name' : '+GitGutter',
+			\ 'j' : ["<Plug>(GitGutterNextHunk)<CR>"	,			'git hunk next']	,
+			\ 'k' : ["<Plug>(GitGutterPrevHunk)<CR>"	,			'git hunk prev']	,
+      \ }
 endfunction
+

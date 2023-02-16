@@ -1,3 +1,10 @@
-"autocmd! User vim-which-key call which_key#register('<Space>', 'g:which_key_map')
-set timeoutlen=500
-nnoremap <silent> <Leader>w :WhichKey '<Space>'<CR>
+let g:which_key_use_floating_win = 1
+let g:which_key_map = {}
+
+call g:Keymap_win()
+call g:Keymap_buf()
+call g:Keymap_coc()
+call g:Keymap_gitgutter()
+
+call which_key#register('<Space>', "g:which_key_map")
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>

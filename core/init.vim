@@ -8,6 +8,22 @@
 
 " vim: set et fenc=utf-8 ff=unix sts=8 sw=4 ts=4 :
 
+function! IsWSL()
+  if has("unix")
+    let lines = readfile("/proc/version")
+    if lines[0] =~ "WSL"
+      return 1
+    endif
+  endif
+  return 0
+endfunction
+
+if IsWSL()
+	let &t_SI.="\e[5 q"
+	let &t_SR.="\e[3 q"
+	let &t_EI.="\e[1 q"
+endif
+
 
 
 "----------------------------------------------------------------------
@@ -58,6 +74,9 @@ autocmd BufReadPost *
 "----------------------------------------------------------------------
 " core initialize
 "----------------------------------------------------------------------
+set timeoutlen=100
+set ttimeoutlen=0 
+
 set nocompatible
 
 set backspace=eol,start,indent
@@ -66,8 +85,6 @@ set cindent
 set winaltkeys=no
 set nowrap
 set wildignore=*.swp,*.bak,*.pyc,*.obj,*.o,*.class
-set ttimeout
-set ttimeoutlen=50
 set cmdheight=1
 set ruler
 set colorcolumn=100
@@ -110,7 +127,7 @@ set wildmenu
 set wildmode=longest:full,full
 
 " 延迟绘制（提升性能）
-set lazyredraw
+" set lazyredraw
 
 " 补全菜单长度
 set pumheight=10
