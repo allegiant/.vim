@@ -2,7 +2,6 @@
 	"floatFactory.floatConfig": {
 		"border": true
 	},
-	"suggest.enableFloat": true,
 	"codeLens.enable": true,
 	"diagnostic.errorSign": " ",
 	"diagnostic.warningSign": " ",

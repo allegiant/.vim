@@ -74,7 +74,7 @@ autocmd BufReadPost *
 "----------------------------------------------------------------------
 " core initialize
 "----------------------------------------------------------------------
-set timeoutlen=100
+set timeoutlen=300
 set ttimeoutlen=0 
 
 set nocompatible

@@ -12,6 +12,22 @@ let g:mapleader = "\<Space>"
 "----------------------------------------------------------------------
 " window control
 "----------------------------------------------------------------------
+
+vnoremap<silent><leader>y "+y<cr>
+nnoremap<silent><leader>y "+y<cr>
+nnoremap<silent><leader>Y '"+yg_'<cr>
+nnoremap<silent><leader>p '"+p'<cr>
+nnoremap<silent><leader>P '"+P'<cr>
+vnoremap<silent><leader>p '"+p'<cr>
+vnoremap<silent><leader>P '"+P'<cr>
+vnoremap<silent><leader>d '"+d'<cr>
+
+" move between windows
+nnoremap<silent><C-h> <C-w>h<cr>
+nnoremap<silent><C-j> <C-w>j<cr>
+nnoremap<silent><C-k> <C-w>k<cr>
+nnoremap<silent><C-l> <C-w>l<cr>
+
 noremap <silent><leader>= :resize +3<cr>
 noremap <silent><leader>- :resize -3<cr>
 noremap <silent><leader>, :vertical resize -3<cr>
@@ -19,10 +35,6 @@ noremap <silent><leader>. :vertical resize +3<cr>
 
 noremap <silent><leader>nh :nohl<cr>
 
-
-" replace
-noremap <leader>p viw"0p
-noremap <leader>y yiw
 
 " fast save
 noremap <C-S> :w<cr>
@@ -53,36 +65,57 @@ function! g:Keymap_win()
 	
 endfunction
 
+function g:Keymap_coc_common() abort
+	 " Use <c-space> to trigger completion
+	if has('nvim')
+	  inoremap <silent><expr> <c-space> coc#refresh()
+	else
+	  inoremap <silent><expr> <c-@> coc#refresh()
+	endif
+	
+	" Use `[g` and `]g` to navigate diagnostics
+	" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
+	nmap<silent> gk <Plug>(coc-diagnostic-prev)
+	nmap<silent> gj <Plug>(coc-diagnostic-next)
+	
+	" GoTo code navigation
+	nmap<silent> gd <Plug>(coc-definition)
+	nmap<silent> gy <Plug>(coc-type-definition)
+	nmap<silent> gi <Plug>(coc-implementation)
+	nmap<silent> gr <Plug>(coc-references)
+	
+	" Use K to show documentation in preview window
+	nmap<silent> gh :call ShowDocumentation()<CR>
+endfunction
 
-
-function! g:Keymap_coc()
+function! g:Keymap_coc_whichkey()
 	let g:which_key_map.g = {
       \ 'name' : '+lsp',
-			\ 'k' : ['<Plug>(coc-diagnostic-prev)'					,	'diagnostic prev']	,
-			\ 'j' : ['<Plug>(coc-diagnostic-next)'					,	'diagnostic next']	,
-			\ 'd' : ['<Plug>(coc-definition)'								,	'definition']				,
-			\ 'y' : ['<Plug>(coc-type-definition)'					,	'type definition']	,
-			\ 'i' : ['<Plug>(coc-implementation)'						,	'implementation']		,
-			\ 'f' : ['<Plug>(coc-references)'								,	'references']				,
-			\ 'h' : [':call ShowDocumentation()<CR>'				,	'show docs']				,
-			\ 'r' : ['<Plug>(coc-rename)'										,	'rename']						,
-			\ 'a' : ['<Plug>(coc-codeaction-cursor)'	,	'code action']			,
+			\ 'a' : ['<Plug>(coc-codeaction-cursor)'	,			'codeaction']	,
+			\ 's' : ['<Plug>(coc-codeaction-cursor)'	,			'codeaction source']	,
+			\ 'f' : ['<Plug>(coc-fix-current)'	,			'quick fix']	,
+      \ }
+	let g:which_key_map.r = {
+      \ 'name' : '+reset',
+			\ 'n' : ['<Plug>(coc-rename)'	,			'rename']	,
       \ }
 	let g:which_key_map.f = {
       \ 'name' : '+file',
+			\ 's' : ['<Plug>(coc-format-selected)'	,			'Format selected']	,
 			\ 'm' : [':Format'	,			'code Format']	,
       \ }
 	let g:which_key_map.c = {
       \ 'name' : '+coc',
-			\ 'a' : [":CocList diagnostics"		,			'CocList diagnostic']			,
-			\ 'e' : [":CocList extensions"		,			'CocList extensions']			,
-			\ 'c' : [":CocList commands"			,			'CocList commands']				,
-			\ 'o' : [":CocList outline"				,			'CocList outline']				,
-			\ 's' : [":CocList -I symbols"		,			'CocList symbols']				,
-			\ 'j' : [":CocList CocNext"				,			'CocList CocNext']				,
-			\ 'k' : [":CocList CocPrev"				,			'CocList CocPrev']				,
-			\ 'p' : [":CocList CocListResume"	,			'CocList CocListResume']	,
-			\ 'm' : [":CocList marketplace"		,			'CocList marketplace']		,
+			\ 'a' : [":CocFzfList diagnostics"									,			'CocList diagnostic']			,
+			\ 'b' : [":CocFzfList diagnostics --current-buf"		,			'CocList diagnostic current buffer only']			,
+			\ 'e' : [":CocFzfList extensions"										,			'CocList extensions']			,
+			\ 'c' : [":CocFzfList commands"											,			'CocList commands']				,
+			\ 'o' : [":CocFzfList outline"											,			'CocList outline']				,
+			\ 's' : [":CocFzfList -I symbols"										,			'CocList symbols']				,
+			\ 'j' : [":CocFzfList CocNext"											,			'CocList CocNext']				,
+			\ 'k' : [":CocFzfList CocPrev"											,			'CocList CocPrev']				,
+			\ 'p' : [":CocFzfList CocListResume"								,			'CocList CocListResume']	,
+			\ 'm' : [":CocFzfList marketplace"									,			'CocList marketplace']		,
       \ }
 endfunction
 

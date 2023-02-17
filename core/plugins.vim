@@ -24,6 +24,9 @@ Plug 'iamcco/coc-vimlsp', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-pairs', {'do': 'yarn install --frozen-lockfile'}
 Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
+Plug 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
+Plug 'junegunn/fzf.vim' " needed for previews
+Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 
 
 
@@ -34,6 +37,6 @@ IncScript core/config/lightline.vim
 IncScript core/config/leaderf.vim
 IncScript core/config/floaterm.vim
 IncScript core/config/gitgutter.vim
-IncScript core/config/coc.vim
 IncScript core/config/whichkey.vim
+IncScript core/config/coc.vim
 
