@@ -1,6 +1,7 @@
-# 一. ideavimrc
+# 一. 依赖
 ```cmd
-    mklink C:\Users\yxu.ARCVIDEO\_ideavimrc c:\vim\.vim\.ideavimrc
+    pacman -S bat ripgrep 
+    yay -S watchman
 ```
 # 二. neovim
 ### windows gui

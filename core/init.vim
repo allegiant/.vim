@@ -5,9 +5,6 @@
 " Tiny script which makes vim become neat and handy, supports vim.tiny
 "
 "======================================================================
-
-" vim: set et fenc=utf-8 ff=unix sts=8 sw=4 ts=4 :
-
 function! IsWSL()
   if has("unix")
     let lines = readfile("/proc/version")
@@ -19,11 +16,33 @@ function! IsWSL()
 endfunction
 
 if IsWSL()
+  augroup Yank
+    autocmd!
+    autocmd TextYankPost * :call system('clip.exe ',@")
+  augroup END
+endif
+
+" let s:clip = '/mnt/c/Windows/System32/clip.exe' 
+" if executable(s:clip)
+"     augroup WSLYank
+"         autocmd!
+"         autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+"     augroup END
+" end
+" map <silent> "=p :r !powershell.exe -Command Get-Clipboard<CR>
+" map! <silent> <C-r>= :r !powershell.exe -Command Get-Clipboard<CR>
+
+" " I thought this will be better :)
+" noremap "+p :exe 'norm a'.system('/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -Command Get-Clipboard')<CR>
+
+" vim: set et fenc=utf-8 ff=unix sts=8 sw=4 ts=4 :
+
+
+if IsWSL()
 	let &t_SI.="\e[5 q"
 	let &t_SR.="\e[3 q"
 	let &t_EI.="\e[1 q"
 endif
-
 
 
 "----------------------------------------------------------------------
@@ -32,36 +51,6 @@ endif
 if has('syntax')  
 	syntax enable 
 	syntax on 
-endif
-
-
-" restore screen after quitting
-if has('unix')
-	" disable modifyOtherKeys
-	if exists('+t_TI') && exists('+t_TE')
-		let &t_TI = ''
-		let &t_TE = ''
-	endif
-	let s:uname = system('uname')
-	let s:xterm = 0
-	if s:uname =~ "FreeBSD"
-		let s:xterm = 1
-	endif
-	" restore screen after quitting
-	if s:xterm != 0
-		if &term =~ "xterm"
-			let &t_ti="\0337\033[r\033[?47h"
-			let &t_te="\033[?47l\0338"
-			if has("terminfo")
-				let &t_Sf="\033[3%p1%dm"
-				let &t_Sb="\033[4%p1%dm"
-			else
-				let &t_Sf="\033[3%dm"
-				let &t_Sb="\033[4%dm"
-			endif
-		endif
-		set restorescreen
-	endif
 endif
 
 " 打开文件时恢复上一次光标所在位置
@@ -115,7 +104,8 @@ set formatoptions+=m
 set formatoptions+=B
 set showcmd
 
-set clipboard+=unnamed 									" Vim 的默认寄存器和系统剪贴板共享
+" set clipboard+=unnamed 									" Vim 的默认寄存器和系统剪贴板共享
+set clipboard+=unnamedplus
 
 " 显示匹配的括号
 set showmatch

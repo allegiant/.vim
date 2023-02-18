@@ -13,28 +13,6 @@ let g:mapleader = "\<Space>"
 " window control
 "----------------------------------------------------------------------
 
-vnoremap<silent><leader>y "+y<cr>
-nnoremap<silent><leader>y "+y<cr>
-nnoremap<silent><leader>Y '"+yg_'<cr>
-nnoremap<silent><leader>p '"+p'<cr>
-nnoremap<silent><leader>P '"+P'<cr>
-vnoremap<silent><leader>p '"+p'<cr>
-vnoremap<silent><leader>P '"+P'<cr>
-vnoremap<silent><leader>d '"+d'<cr>
-
-" move between windows
-nnoremap<silent><C-h> <C-w>h<cr>
-nnoremap<silent><C-j> <C-w>j<cr>
-nnoremap<silent><C-k> <C-w>k<cr>
-nnoremap<silent><C-l> <C-w>l<cr>
-
-noremap <silent><leader>= :resize +3<cr>
-noremap <silent><leader>- :resize -3<cr>
-noremap <silent><leader>, :vertical resize -3<cr>
-noremap <silent><leader>. :vertical resize +3<cr>
-
-noremap <silent><leader>nh :nohl<cr>
-
 
 " fast save
 noremap <C-S> :w<cr>
@@ -60,7 +38,6 @@ function! g:Keymap_win()
       \ '=' : ['<C-W>='     , 'balance-window']        ,
       \ 's' : ['<C-W>s'     , 'split-window-below']    ,
       \ 'v' : ['<C-W>v'     , 'split-window-below']    ,
-      \ '?' : ['Windows'    , 'fzf-window']            ,
       \ }
 	
 endfunction
@@ -79,43 +56,48 @@ function g:Keymap_coc_common() abort
 	nmap<silent> gj <Plug>(coc-diagnostic-next)
 	
 	" GoTo code navigation
-	nmap<silent> gd <Plug>(coc-definition)
-	nmap<silent> gy <Plug>(coc-type-definition)
-	nmap<silent> gi <Plug>(coc-implementation)
-	nmap<silent> gr <Plug>(coc-references)
+	nnoremap<silent> gd :<c-u>CocCommand fzf-preview.CocDefinition<CR>
+	nnoremap<silent> gy :<c-u>CocCommand fzf-preview.CocTypeDefinition<CR>
+	nnoremap<silent> gi :<c-u>CocCommand fzf-preview.CocTypeImplementation<CR>
+	nnoremap<silent> gr :<c-u>CocCommand fzf-preview.CocReferences<CR>
+	nnoremap<silent> gh :call CocActionAsync('doHover')<CR>
+	nnoremap<silent> ga <Plug>(coc-codeaction-cursor)
+	nnoremap<silent> gs <Plug>(coc-codeaction-source)
+	nnoremap<silent> gl <Plug>(coc-codelens-action)
 	
-	" Use K to show documentation in preview window
-	nmap<silent> gh :call ShowDocumentation()<CR>
+	
 endfunction
 
 function! g:Keymap_coc_whichkey()
 	let g:which_key_map.g = {
       \ 'name' : '+lsp',
-			\ 'a' : ['<Plug>(coc-codeaction-cursor)'	,			'codeaction']	,
-			\ 's' : ['<Plug>(coc-codeaction-cursor)'	,			'codeaction source']	,
 			\ 'f' : ['<Plug>(coc-fix-current)'	,			'quick fix']	,
-      \ }
-	let g:which_key_map.r = {
-      \ 'name' : '+reset',
-			\ 'n' : ['<Plug>(coc-rename)'	,			'rename']	,
+			\ 'r' : ['<Plug>(coc-rename)'	,			'rename']	,
+			\ 's' : ['<Plug>(coc-format-selected)'	,			'Format selected']	,
       \ }
 	let g:which_key_map.f = {
       \ 'name' : '+file',
-			\ 's' : ['<Plug>(coc-format-selected)'	,			'Format selected']	,
 			\ 'm' : [':Format'	,			'code Format']	,
+			\ '/' : ["m/"	,			'line query']	,
+			\ '*' : ["m*"	,			'line query word']	,
+			\ 's' : ["mgr"	,			'project grep n-v mode']	,
+			\ 'r' : [":CocCommand fzf-preview.ProjectGrepRecall"	,			'project grep recall']	,
+			\ 'f' : [":CocCommand fzf-preview.ProjectFiles"	,			'project files']	,
+			\ 'u' : [":CocCommand fzf-preview.ProjectMruFiles"	,			'recently used files']	,
       \ }
+
+
 	let g:which_key_map.c = {
       \ 'name' : '+coc',
-			\ 'a' : [":CocFzfList diagnostics"									,			'CocList diagnostic']			,
-			\ 'b' : [":CocFzfList diagnostics --current-buf"		,			'CocList diagnostic current buffer only']			,
-			\ 'e' : [":CocFzfList extensions"										,			'CocList extensions']			,
-			\ 'c' : [":CocFzfList commands"											,			'CocList commands']				,
-			\ 'o' : [":CocFzfList outline"											,			'CocList outline']				,
-			\ 's' : [":CocFzfList -I symbols"										,			'CocList symbols']				,
-			\ 'j' : [":CocFzfList CocNext"											,			'CocList CocNext']				,
-			\ 'k' : [":CocFzfList CocPrev"											,			'CocList CocPrev']				,
-			\ 'p' : [":CocFzfList CocListResume"								,			'CocList CocListResume']	,
-			\ 'm' : [":CocFzfList marketplace"									,			'CocList marketplace']		,
+			\ 'a' : [":CocCommand fzf-preview.CocDiagnostics"									,			'CocList diagnostic']			,
+			\ 'e' : [":CocList extensions"									,			'Coc extensions']			,
+			\ 'c' : [":CocList commands"											,			'CocList commands']				,
+			\ 'o' : [":CocList outline"											,			'CocList outline']				,
+			\ 's' : [":CocList -I symbols"										,			'CocList symbols']				,
+			\ 'j' : [":CocList CocNext"											,			'CocList CocNext']				,
+			\ 'k' : [":CocList CocPrev"											,			'CocList CocPrev']				,
+			\ 'p' : [":CocList CocListResume"								,			'CocList CocListResume']	,
+			\ 'm' : [":CocList marketplace"									,			'CocList marketplace']		,
       \ }
 endfunction
 
@@ -161,9 +143,15 @@ endfunction
 
 function! g:Keymap_gitgutter()
 	let g:which_key_map.s = {
-      \ 'name' : '+GitGutter',
+      \ 'name' : '+Git',
+			\ 'f' : [":CocCommand fzf-preview.GitFiles"	,			'git files']	,
 			\ 'j' : ["<Plug>(GitGutterNextHunk)<CR>"	,			'git hunk next']	,
 			\ 'k' : ["<Plug>(GitGutterPrevHunk)<CR>"	,			'git hunk prev']	,
+			\ 'u' : [":CocCommand fzf-preview.FromResources project_mru git"	,			'git project mru']	,
+			\ 's' : [":CocCommand fzf-preview.GitStatus"	,			'git status']	,
+			\ 'a' : [":CocCommand fzf-preview.GitActions"	,			'git actions']	,
+			\ 'g' : [":CocCommand fzf-preview.Jumps"	,			'git jumps']	,
+			\ 'c' : [":CocCommand fzf-preview.Changes"	,			'git changes']	,
       \ }
 endfunction
 
