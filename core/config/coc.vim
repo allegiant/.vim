@@ -71,7 +71,7 @@ call g:Keymap_coc_common()
 let g:coc_global_extensions = [
 			\ 'coc-marketplace', 'coc-vimlsp', 'coc-snippets',
 			\ 'coc-pairs', 'coc-rust-analyzer', 'coc-json', 
-			\ '@yaegassy/coc-volar', 'coc-fzf-preview' 
+			\ '@yaegassy/coc-volar', '@yaegassy/coc-volar-tools', 'coc-fzf-preview'
 			\ ]
 
 

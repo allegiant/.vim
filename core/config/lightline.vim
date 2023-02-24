@@ -2,7 +2,8 @@ function! CocCurrentFunction()
     return get(b:, 'coc_current_function', '')
 endfunction
 
-
+"\ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+"      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
 let g:lightline = {
       \ 'colorscheme': 'gruvbox_material',
       \ 'active': {
@@ -10,7 +11,7 @@ let g:lightline = {
       \ },
       \ 'tabline': {
       \   'left': [ ['buffers'] ],
-      \   'right': [ ['close'] ]
+			\		'right': [ [] ]
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers'
@@ -18,14 +19,11 @@ let g:lightline = {
       \ 'component_type': {
       \   'buffers': 'tabsel'
       \ },
-      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
 			\ 'component_function': {
       \   'cocstatus': 'coc#status',
       \   'currentfunction': 'CocCurrentFunction'
       \ },
       \ }
-
 let g:lightline#bufferline#enable_devicons = 1
 let g:lightline#bufferline#enable_nerdfont = 1
 let g:lightline#bufferline#icon_position = 'right'

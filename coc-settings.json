@@ -40,5 +40,7 @@
 		"typeParameter": "\uf728",
 		"default": " "
 	},
-	"volar.autoClosingTags": true
+	"volar.autoClosingTags": true,
+	"volar.takeOverMode.enabled": true,
+	"volar.completion.preferredTagNameCase": "kebab"
 }

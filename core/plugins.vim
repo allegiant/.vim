@@ -14,10 +14,8 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'tpope/vim-commentary'
 Plug 'voldikss/vim-floaterm'
 Plug 'airblade/vim-gitgutter'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
-
 
 
 call plug#end()
@@ -28,4 +26,3 @@ IncScript core/config/floaterm.vim
 IncScript core/config/gitgutter.vim
 IncScript core/config/whichkey.vim
 IncScript core/config/coc.vim
-
