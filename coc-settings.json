@@ -42,5 +42,10 @@
 	},
 	"volar.autoClosingTags": true,
 	"volar.takeOverMode.enabled": true,
-	"volar.completion.preferredTagNameCase": "kebab"
+	"volar.completion.preferredTagNameCase": "kebab",
+	"workspace.ignoredFolders": [
+		"$HOME",
+		"$HOME/.cargo/**",
+		"$HOME/.rustup/**"
+	]
 }

@@ -4,7 +4,7 @@ call plug#begin(path)
 
 Plug 'rhysd/vim-healthcheck'
 Plug 'sainnhe/gruvbox-material'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
